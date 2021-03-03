@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "tourguidejs": "./src/modules/tourguide.js/tourguide.esm.js",
+          "tourguidejs/tourguide.css": "./src/modules/tourguide.js/tourguide.css"
+        }
+      }
+    ]
+  ]
+}

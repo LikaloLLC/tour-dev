@@ -1,0 +1,14 @@
+{
+  "extends": ["react-app", "react-app/jest"],
+  "plugins": ["import"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["tourguidejs/", "./src/modules/tourguide.js/"],
+          ["tourguidejs", "./src/modules/tourguide.js/tourguide.esm.js"]
+        ]
+      }
+    }
+  }
+}
