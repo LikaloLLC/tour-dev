@@ -27,13 +27,13 @@ function ExamplePage() {
               className={cls(
                 "nav-link",
                 routeProps.exact &&
-                  pathname === `${path}/${routeProps.path}` &&
+                  pathname === `${path}${routeProps.path}` &&
                   "active",
                 !routeProps.exact &&
-                  pathname.startsWith(`${path}/${routeProps.path}`) &&
+                  pathname.startsWith(`${path}${routeProps.path}`) &&
                   "active"
               )}
-              to={`${url}/${routeProps.path}`}
+              to={`${url}${routeProps.path}`}
             >
               {routeProps.title}
             </Link>
@@ -50,7 +50,7 @@ function ExamplePage() {
         {exampleRoutes.map((routeProps) => (
           <Route
             key={`${routeProps.path}${routeProps.exact ? "-exact" : ""}`}
-            path={`${path}/${routeProps.path}`}
+            path={`${path}${routeProps.path}`}
             exact={routeProps.exact}
             component={routeProps.component}
           />

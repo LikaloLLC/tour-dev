@@ -10,7 +10,7 @@ function App() {
   const { pathname } = useLocation();
 
   return (
-    <div className="m-2">
+    <div className="m-4">
       <ul className="nav nav-pills">
         {appRoutes.map((routeProps) => (
           <li
