@@ -5,32 +5,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Tourguide from "tourguidejs";
 import "tourguidejs/tourguide.css";
 
-import steps from "./steps.json";
-
 function App() {
   const tourguideRef = useRef(null);
 
   useEffect(() => {
-    if (!tourguideRef.current) {
-      tourguideRef.current = new Tourguide({
-        root: "#root",
-        // src: remote url of steps, // or
-        steps: steps,
-        animationspeed: 1000,
-        preloadimages: true,
-        colors: {
-          bullet: "#28a745",
-          bulletCurrent: "#0a581c",
-          stepButtonPrev: "#28a745",
-          stepButtonNext: "#28a745",
-          stepButtonComplete: "#0a581c",
-        },
-      });
-    }
+    tourguideRef.current = new Tourguide({
+      src: "https://run.mocky.io/v3/21d5f685-2ba1-4686-b25d-29b02b934728",
+    });
 
     return () => {
-      if (!tourguideRef.current) return;
       tourguideRef.current.reset();
+      tourguideRef.current = null;
     };
   }, []);
 
@@ -42,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="py-5 text-center" tour-component="header">
+        <div className="py-5 text-center" tour-step="header">
           <h2>Checkout form</h2>
           <p className="lead">
             Below is an example usage of Tourguide.js' remote json based
@@ -52,7 +37,7 @@ function App() {
             <button
               className="btn btn-success btn-lg btn-block"
               onClick={handleClickStartTour}
-              tour-component="start"
+              tour-step="start"
             >
               Start tour
             </button>
@@ -64,7 +49,7 @@ function App() {
               <span className="text-muted">Your cart</span>
               <span className="badge badge-secondary badge-pill">3</span>
             </h4>
-            <ul className="list-group mb-3" tour-component="cart">
+            <ul className="list-group mb-3" tour-step="cart">
               <li className="list-group-item d-flex justify-content-between lh-condensed">
                 <div>
                   <h6 className="my-0">Product name</h6>
@@ -102,7 +87,7 @@ function App() {
             <form
               className="card p-2"
               noValidate
-              tour-component="code"
+              tour-step="code"
               onSubmit={(e) => {
                 e.preventDefault();
               }}
@@ -130,7 +115,7 @@ function App() {
                 e.preventDefault();
               }}
             >
-              <div className="row" tour-component="customer">
+              <div className="row" tour-step="customer">
                 <div className="col-md-6 mb-3">
                   <label htmlFor="firstName">First name</label>
                   <input
@@ -285,7 +270,7 @@ function App() {
 
               <h4 className="mb-3">Payment</h4>
 
-              <div className="d-block my-3" tour-component="payment">
+              <div className="d-block my-3" tour-step="payment">
                 <div className="custom-control custom-radio">
                   <input
                     id="credit"
@@ -385,7 +370,7 @@ function App() {
               <button
                 className="btn btn-primary btn-lg btn-block"
                 type="submit"
-                tour-component="submit"
+                tour-step="submit"
               >
                 Continue to checkout
               </button>

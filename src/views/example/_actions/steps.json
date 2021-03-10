@@ -37,40 +37,40 @@
     ]
   },
   {
-    "selector": "[tour-component=\"header\"]",
+    "selector": "[tour-step=\"header\"]",
     "step": 3,
     "title": "Heading",
     "content": "This is the heading content"
   },
   {
-    "selector": "[tour-component=\"start\"]",
+    "selector": "[tour-step=\"start\"]",
     "step": 4,
     "title": "Start Button",
     "marked": true,
     "content": "Click here to start the tour.\n\n> invalid action target.\n",
     "actions": [
       {
-        "target": "[tour-component=\"start\"] button",
+        "target": "[tour-step=\"start\"] button",
         "act": 0,
         "event": "click"
       }
     ]
   },
   {
-    "selector": "[tour-component=\"cart\"]",
+    "selector": "[tour-step=\"cart\"]",
     "step": 4,
     "title": "Your cart",
     "content": "Example cart description text displays cart description"
   },
   {
-    "selector": "[tour-component=\"code\"]",
+    "selector": "[tour-step=\"code\"]",
     "step": 5,
     "title": "Promo code",
     "marked": true,
     "content": "Example cart promo code text displays promo code description.\n\n> press <kbd>Enter</kbd> on input or click button to continue.\n",
     "actions": [
       {
-        "target": "[tour-component=\"code\"] input",
+        "target": "[tour-step=\"code\"] input",
         "act": "next",
         "event": {
           "type": "keyup",
@@ -78,26 +78,26 @@
         }
       },
       {
-        "target": "[tour-component=\"code\"] button",
+        "target": "[tour-step=\"code\"] button",
         "act": "next",
         "event": "click"
       }
     ]
   },
   {
-    "selector": "[tour-component=\"customer\"]",
+    "selector": "[tour-step=\"customer\"]",
     "step": 6,
     "title": "Customer name",
     "content": "Example cart customer name text displays customer name description"
   },
   {
-    "selector": "[tour-component=\"payment\"]",
+    "selector": "[tour-step=\"payment\"]",
     "step": 7,
     "title": "Payment",
     "content": "Example cart Payment text displays Payment description"
   },
   {
-    "selector": "[tour-component=\"submit\"]",
+    "selector": "[tour-step=\"submit\"]",
     "step": 8,
     "title": "Continue",
     "content": "Example cart continue button text displays continue button description"

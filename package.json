@@ -20,7 +20,7 @@
     "test": "craco test",
     "lint": "eslint .",
     "eject": "react-scripts eject",
-    "copy:examples": "cpx \"src/views/example/*/*.{json,jsx,js,css}\" \"src/modules/tourguide.js/examples/example_reactjs\"",
+    "copy:examples": "cpx \"src/views/example/!(_*)/*.{json,jsx,js,css}\" \"src/modules/tourguide.js/examples/example_reactjs\"",
     "clean:examples": "rimraf -rf \"src/modules/tourguide.js/examples/example_reactjs/*\""
   },
   "browserslist": {
